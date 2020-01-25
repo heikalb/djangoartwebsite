@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Project-specific apps
     'images',
-    'messages'
+    'visitor_messages'
 ]
 
 MIDDLEWARE = [
