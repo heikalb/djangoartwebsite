@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 def home_view(request):
     context = {}
-    return request(request, 'images/image_list.html', context)
+    return render(request, 'images/image_list.html', context)
