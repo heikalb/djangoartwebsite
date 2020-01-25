@@ -1,1 +1,3 @@
-#django-art-website
+# djangoartwebsite
+
+Project in progress. Description coming soon
