@@ -136,7 +136,7 @@ a {
 }
 
 .thumbnail-gallery .portrait {
-    min-height: 100%;
+    height: initial;
     width: 100%;
 }
 
