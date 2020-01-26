@@ -131,15 +131,13 @@ a {
     bottom: 0;
     margin: auto;
     color: #f2f2f2;
-    color: rgba(242, 242, 242, 0)
-}
-
-.thumbnail-gallery .landscape {
-    height: 100%
+    color: rgba(242, 242, 242, 0);
+    height: 100%;
 }
 
 .thumbnail-gallery .portrait {
-    width: 100%
+    min-height: 100%;
+    width: 100%;
 }
 
 .thumbnail-gallery img[data-src] {
