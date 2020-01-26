@@ -19,3 +19,4 @@ class Image(models.Model):
     location = models.CharField(max_length=100, null=True, blank=True)
     category = models.CharField(max_length=100, choices=CATEGORIES, null=True, blank=True)
     featured = models.BooleanField(default=False)
+    ranking = models.IntegerField(default=0)
