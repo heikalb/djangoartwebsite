@@ -5,11 +5,11 @@ from django.db import models
 
 class Image(models.Model):
     CATEGORIES = [
-        ('Birds (photography)', 'Birds'),
-        ('Waterfowls (photography)', 'Waterfowls'),
-        ('Madison, WI (photography)', 'Madison, WI'),
-        ('Other (photography)', 'Other'),
-        ('Paintings (photography)', 'Paintings')
+        ('Birds', 'Birds'),
+        ('Waterfowls', 'Waterfowls'),
+        ('Madison, WI', 'Madison, WI'),
+        ('Other', 'Other'),
+        ('Paintings', 'Paintings')
     ]
 
     full_image_file = models.ImageField(upload_to='images/full')
@@ -17,6 +17,8 @@ class Image(models.Model):
     caption = models.CharField(max_length=200, null=True, blank=True)
     date = models.DateField(null=True, blank=True)
     location = models.CharField(max_length=100, null=True, blank=True)
-    category = models.CharField(max_length=100, choices=CATEGORIES, null=True, blank=True)
+    category = models.CharField(max_length=100, choices=CATEGORIES, null=True)
     featured = models.BooleanField(default=False)
-    ranking = models.IntegerField(default=0)
+    ranking = models.IntegerField(default=100)
+    featured_ranking = models.IntegerField(default=100)
+    portrait = models.BooleanField(default=False)
