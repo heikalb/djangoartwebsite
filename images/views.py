@@ -27,9 +27,9 @@ def madison_view(request):
     return list_view(request, 'Madison, WI')
 
 
-def madison_view(request):
+def other_view(request):
     return list_view(request, 'Other')
 
 
-def madison_view(request):
+def paintings_view(request):
     return list_view(request, 'Paintings')
