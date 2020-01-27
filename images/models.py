@@ -22,3 +22,6 @@ class Image(models.Model):
     ranking = models.IntegerField(default=100)
     featured_ranking = models.IntegerField(default=100)
     portrait = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.full_image_file.url.split('/')[-1]} - {self.category}"
