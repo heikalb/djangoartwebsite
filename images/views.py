@@ -4,7 +4,8 @@ from .models import Image
 
 
 def home_view(request):
-    images = Image.objects.filter(featured=True)
+    images = Image.objects.filter(featured=True).order_by('featured_ranking')
+
     description = "Photography from Madison, Wisconsin, USA, to Greater " \
                   "Vancouver, British Columbia, Canada. Fixated upon ducks, " \
                   "birds, pretty bugs, trees, leaves, water, reflections, winter " \
@@ -29,7 +30,6 @@ def birds_view(request):
 
 def waterfowls_view(request):
     description = 'Birds, but on water.'
-
     return list_view(request, 'Waterfowls', description)
 
 
