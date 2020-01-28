@@ -357,6 +357,11 @@ form #submit-button {
     display: none
 }
 
+form ul.errorlist li{
+    color: red;
+    list-style-type: none;
+}
+
 #copyright {
     text-align: center;
     color: #ccc;
@@ -469,6 +474,7 @@ body.darkened .gallery {
     form input, form textarea{
         width: 100%;
     }
+
     .featherlight-next {
         right: 10px;
         left: 85%
