@@ -436,7 +436,8 @@ body.darkened .gallery {
     #copyright, #no-JS-message, #page-desc, #page-links, .thumbnail-gallery,
     form {
         width: 99%;
-        margin-left: 1%
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #page-links {
@@ -462,7 +463,7 @@ body.darkened .gallery {
     }
 
     form p {
-        width: 100%
+        width: 98%
     }
 
     form input, form textarea{
