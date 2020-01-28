@@ -1,19 +1,15 @@
 from django.shortcuts import render
-from .models import VisitorMessage
+from .forms import ContactForm
 # Create your views here.
 
 
 def contact_view(request):
-    form = ContactForm()
+    form = ContactForm(request.POST or None)
 
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-
-        if form.is_valid():
-            new_message = VisitorMessage.objects.create(**form.cleaned_data)
-            form = ContactForm()
-
+    if form.is_valid():
+        form.save()
+        form = ContactForm()
 
     context = {'form': form}
 
-    return render(request, 'visitor_messages/contact.html',context)
+    return render(request, 'visitor_messages/contact.html', context)
