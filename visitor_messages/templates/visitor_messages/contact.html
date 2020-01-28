@@ -3,7 +3,7 @@
 {% block content %}
 <form method = "post" class = 'darkable'> {% csrf_token %}
     <h3>Leave a message here (or email heikal93(at)gmail.com)</h3>
-    {{ post.as_p }}
-    <input type='submit' id = "submit-button" value="Submit"/>
+    {{ form.as_p }}
+    <input type='submit' value="Submit"/>
 </form>
 {% endblock %}
