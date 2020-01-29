@@ -1,3 +1,16 @@
+function highlightCurrent()
+{
+    $('#site-header a').each(
+        function()
+        {
+            if ($(this).prop('href') == window.location.href)
+            {    
+                $(this).addClass('current-page-link');
+            }
+        }
+    );
+}
+
 function respToArrowPress(e)
 {
     if($(".featherlight-previous span")||$(".featherlight-next span"))
@@ -79,6 +92,8 @@ function blink_load(e)
 
 $(document).ready(function()
 {
+    highlightCurrent()
+
     // Set theme based on computer's local time
     var e=new Date, n=e.getHours();
     (n>=18||7>=n)&&$(".darkable").addClass("darkened");
