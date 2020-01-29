@@ -321,7 +321,8 @@ form label {
 
 form textarea {
     display: block;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    height: 100px;
 }
 
 form textarea.warning {
@@ -329,13 +330,13 @@ form textarea.warning {
     box-shadow: 0 0 3px red
 }
 
-form input[type='submit'], #submit-button, .like-button, .submit-button-no-JS {
+form input[type='submit']{
     text-align: center;
     cursor: pointer;
     -webkit-transition: background-color, .5s
 }
 
-form input[type='submit'], #submit-button, .submit-button-no-JS {
+form input[type='submit']{
     background-color: #09c;
     padding: 15px 5px;
     margin-bottom: 15px;
@@ -392,6 +393,11 @@ form ul.errorlist li{
     margin: 5px 0
 }
 
+
+
+
+/*****************************************************************************/
+/* Styling under night theme*/
 #site-header.darkened, body.darkened {
     background: #333
 }
@@ -410,7 +416,7 @@ form.darkened p{
     color: #09c
 }
 
-form.darkened input[type='text'],form.darkened input[type='email'], form.darkened textarea {
+form.darkened :not(input[type='submit']), form.darkened textarea {
     background: 0;
     color: #fff
 }
@@ -431,6 +437,7 @@ body.darkened .gallery {
 
 
 
+/*****************************************************************************/
 /*Smaller display styling*/
 @media screen and (max-width:950px) {
     #site-title {
