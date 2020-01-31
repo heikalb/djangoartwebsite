@@ -14,7 +14,7 @@
 <section class = "thumbnail-gallery thumbnail-gallery-js-enabled" data-featherlight-gallery data-featherlight-filter="a">
     {% for image in images %}
     <a href="{{ image.full_image_file.url }}" class="gallery">
-        <img class="{% if image.portrait %}portrait{% endif %}" src="{{ image.thumbnail.url }}">
+        <img class="{% if image.portrait %}portrait{% endif %}" data-src="{{ image.thumbnail.url }}">
     </a>
     {% endfor %}
 </section>
